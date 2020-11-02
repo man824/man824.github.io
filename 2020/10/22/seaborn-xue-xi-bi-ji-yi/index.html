@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="seaborn.heatmap, Neal&#39;s blog">
+    <meta name="keywords" content="seaborn学习笔记（一）, Neal&#39;s blog">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>seaborn.heatmap | Neal&#39;s blog</title>
+    <title>seaborn学习笔记（一） | Neal&#39;s blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -31,6 +31,16 @@
 
 <meta name="generator" content="Hexo 5.2.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
+
+
+   <style>
+    body{
+       background-image: url(https://cdn.jsdelivr.net/gh/Tokisaki-Galaxy/res/site/medias/background.jpg);
+       background-repeat:no-repeat;
+       background-size:cover;
+       background-attachment:fixed;
+    }
+</style>
 
 
 
@@ -234,8 +244,8 @@
         
         <li><div class="divider"></div></li>
         <li>
-            <a href="https://github.com/blinkfox/hexo-theme-matery" class="waves-effect waves-light" target="_blank">
-                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            <a href="https://github.com/man824/blog_source" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>man824
             </a>
         </li>
         
@@ -291,8 +301,8 @@
     }
 </style>
 
-<a href="https://github.com/blinkfox/hexo-theme-matery" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
-   data-tooltip="Fork Me" data-position="left" data-delay="50">
+<a href="https://github.com/man824/blog_source" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="man824" data-position="left" data-delay="50">
     <svg viewBox="0 0 250 250" aria-hidden="true">
         <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
         <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
@@ -310,12 +320,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/21.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">seaborn.heatmap</h1>
+                    <h1 class="description center-align post-title">seaborn学习笔记（一）</h1>
                 </div>
             </div>
         </div>
@@ -474,7 +484,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    0
+                    689
                 </div>
                 
 
@@ -491,61 +501,55 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                
+                <h1 id="seaborn功能概述"><a href="#seaborn功能概述" class="headerlink" title="seaborn功能概述"></a>seaborn功能概述</h1><p>seaborn 的功能：</p>
+<ul>
+<li>计算<a target="_blank" rel="noopener" href="http://seaborn.pydata.org/examples/faceted_lineplot.html#faceted-lineplot">多变量</a>间<a target="_blank" rel="noopener" href="http://seaborn.pydata.org/examples/scatter_bubbles.html#scatter-bubbles">关系</a>的面向数据集接口</li>
+<li>可视化类别变量的<a target="_blank" rel="noopener" href="http://seaborn.pydata.org/examples/jitter_stripplot.html#jitter-stripplot">观测</a>与<a target="_blank" rel="noopener" href="http://seaborn.pydata.org/examples/pointplot_anova.html#pointplot-anova">统计</a></li>
+<li>可视化<a target="_blank" rel="noopener" href="http://seaborn.pydata.org/examples/distplot_options.html#distplot-options">单变量</a>或<a target="_blank" rel="noopener" href="http://seaborn.pydata.org/examples/joint_kde.html#joint-kde">多变量</a>分布并与其子数据集<a target="_blank" rel="noopener" href="http://seaborn.pydata.org/examples/horizontal_boxplot.html#horizontal-boxplot">比较</a></li>
+<li>控制<a target="_blank" rel="noopener" href="http://seaborn.pydata.org/examples/anscombes_quartet.html#anscombes-quartet">线性回归</a>的不同<a target="_blank" rel="noopener" href="http://seaborn.pydata.org/examples/logistic_regression.html#logistic-regression">因变量</a>并进行参数估计与作图</li>
+<li>对复杂数据进行易行的整体<a target="_blank" rel="noopener" href="http://seaborn.pydata.org/examples/scatterplot_matrix.html#scatterplot-matrix">结构</a>可视化</li>
+<li>对<a target="_blank" rel="noopener" href="http://seaborn.pydata.org/examples/faceted_histogram.html#faceted-histogram">多表统计图</a>的制作高度抽象并简化可视化过程</li>
+<li>提供多个内建<a target="_blank" rel="noopener" href="http://seaborn.pydata.org/tutorial/aesthetics.html#aesthetics-tutorial">主题</a>渲染 matplotlib 的图像样式</li>
+<li>提供<a target="_blank" rel="noopener" href="http://seaborn.pydata.org/tutorial/color_palettes.html#palette-tutorial">调色板</a>工具生动再现数据</li>
+</ul>
+<p>Seaborn 框架旨在以数据可视化为中心来挖掘与理解数据。它提供的面向数据集制图函数主要是对行列索引和数组的操作，包含对整个数据集进行内部的语义映射与统计整合，以此生成富于信息的图表。</p>
+<p>例：</p>
+<pre class=" language-python"><code class="language-python"><span class="token keyword">import</span> seaborn <span class="token keyword">as</span> sns
+sns<span class="token punctuation">.</span>set<span class="token punctuation">(</span><span class="token punctuation">)</span>
+tips <span class="token operator">=</span> sns<span class="token punctuation">.</span>load_dataset<span class="token punctuation">(</span><span class="token string">"tips"</span><span class="token punctuation">)</span>
+sns<span class="token punctuation">.</span>relplot<span class="token punctuation">(</span>x<span class="token operator">=</span><span class="token string">"total_bill"</span><span class="token punctuation">,</span> y<span class="token operator">=</span><span class="token string">"tip"</span><span class="token punctuation">,</span> col<span class="token operator">=</span><span class="token string">"time"</span><span class="token punctuation">,</span>
+            hue<span class="token operator">=</span><span class="token string">"smoker"</span><span class="token punctuation">,</span> style<span class="token operator">=</span><span class="token string">"smoker"</span><span class="token punctuation">,</span> size<span class="token operator">=</span><span class="token string">"size"</span><span class="token punctuation">,</span>
+            data<span class="token operator">=</span>tips<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p><img src="https://github.com/man824/blog_source/blob/main/img/seaborn-1.jpg?raw=true"></p>
+<ol>
+<li>装载 seaborn</li>
+</ol>
+<pre class=" language-python"><code class="language-python"><span class="token keyword">import</span> seaborn <span class="token keyword">as</span> sns <span class="token comment" spellcheck="true"># 此处，seaborn 实际调用了 matplotlib 作图。</span></code></pre>
+<ol start="2">
+<li>我们设置并使用 seaborn 默认的主题、尺寸大小以及调色板。</li>
+</ol>
+<pre class=" language-py"><code class="language-py">sns.set()</code></pre>
+<ol start="3">
+<li>装载数据集</li>
+</ol>
+<pre class=" language-py"><code class="language-py">tips = sns.load_dataset("tips")</code></pre>
+<p>文档中的代码多数会使用 <a target="_blank" rel="noopener" href="https://seaborn.apachecn.org/#/generated/seaborn.load_dataset.html?id=seaborn.load_dataset"><code>load_dataset()</code></a> 去取得样例数据集。这些数据集没什么特殊，都是 pandas 的数据结构（dataframes），所以我们也可以使用 <code>pandas.read_csv</code> 或者手动输入创建数据集。<code>tips</code> 数据集提供了一种“整洁”的整合数据的方式，所以如果你使用这种方式来整合自己的数据，使用 seaborn 再好不过了。<a target="_blank" rel="noopener" href="https://seaborn.apachecn.org/#/docs/1?id=intro-tidy-data">下面</a>详细解释为什么。</p>
+<ol start="4">
+<li>我们写一个多子图散点图，分配语义变量</li>
+</ol>
+<pre class=" language-python"><code class="language-python">sns<span class="token punctuation">.</span>relplot<span class="token punctuation">(</span>x<span class="token operator">=</span><span class="token string">"total_bill"</span><span class="token punctuation">,</span> y<span class="token operator">=</span><span class="token string">"tip"</span><span class="token punctuation">,</span> col<span class="token operator">=</span><span class="token string">"time"</span><span class="token punctuation">,</span>
+            hue<span class="token operator">=</span><span class="token string">"smoker"</span><span class="token punctuation">,</span> style<span class="token operator">=</span><span class="token string">"smoker"</span><span class="token punctuation">,</span> size<span class="token operator">=</span><span class="token string">"size"</span><span class="token punctuation">,</span>
+            data<span class="token operator">=</span>tips<span class="token punctuation">)</span></code></pre>
+<p>这张图说明了 <code>tips</code> 数据集中五个变量的关系，三个是数值变量，另外两个是类别变量。其中 <code>total_bill</code> 和 <code>tip</code> 这两个数值变量决定了轴上每个点出现的位置，另外一个 <code>size</code> 变量影响着出现点的大小。第一个类别变量 <code>time</code> 将散点图分为两个子图，第二个类别变量 <code>smoker</code> 决定点的形状。</p>
+<p>所有上述内容均由 <a target="_blank" rel="noopener" href="https://seaborn.apachecn.org/#/generated/seaborn.relplot.html?id=seaborn.relplot"><code>relplot</code></a> 一次调用生成。注意，在函数调用过程中，我们仅仅使用变量名来划分图像中的不同的语义。如果直接使用 matplotlib ，就必须将变量转换为可视化函数的参数（例如，指定颜色，指定每个类别的制图方式），这在 seaborn 中被自动执行了，以此让使用者将注意力放在他们要解决的问题上。</p>
+<hr>
+<h1 id=""><a href="#" class="headerlink" title=""></a></h1><p>附：<a target="_blank" rel="noopener" href="https://seaborn.apachecn.org/#/docs/1">seaborn官方文档（中文）</a></p>
+
             </div>
             <hr/>
 
             
-
-    <div class="reprint" id="reprint-statement">
-        
-            <div class="reprint__author">
-                <span class="reprint-meta" style="font-weight: bold;">
-                    <i class="fas fa-user">
-                        Author:
-                    </i>
-                </span>
-                <span class="reprint-info">
-                    <a href="/about" rel="external nofollow noreferrer">man824</a>
-                </span>
-            </div>
-            <div class="reprint__type">
-                <span class="reprint-meta" style="font-weight: bold;">
-                    <i class="fas fa-link">
-                        Link:
-                    </i>
-                </span>
-                <span class="reprint-info">
-                    <a href="http://example.com/2020/10/22/seaborn-heatmap/">http://example.com/2020/10/22/seaborn-heatmap/</a>
-                </span>
-            </div>
-            <div class="reprint__notice">
-                <span class="reprint-meta" style="font-weight: bold;">
-                    <i class="fas fa-copyright">
-                        Reprint policy:
-                    </i>
-                </span>
-                <span class="reprint-info">
-                    All articles in this blog are used except for special statements
-                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
-                    reprint polocy. If reproduced, please indicate source
-                    <a href="/about" target="_blank">man824</a>
-                    !
-                </span>
-            </div>
-        
-    </div>
-
-    <script async defer>
-      document.addEventListener("copy", function (e) {
-        let toastHTML = '<span>Copied successfully, please follow the reprint policy of this article</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">more</a>';
-        M.toast({html: toastHTML})
-      });
-
-      function navToReprintStatement() {
-        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
-      }
-    </script>
 
 
 
@@ -585,132 +589,6 @@
                 </div>
             </div>
             
-                <style>
-    #reward {
-        margin: 40px 0;
-        text-align: center;
-    }
-
-    #reward .reward-link {
-        font-size: 1.4rem;
-        line-height: 38px;
-    }
-
-    #reward .btn-floating:hover {
-        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
-    }
-
-    #rewardModal {
-        width: 320px;
-        height: 350px;
-    }
-
-    #rewardModal .reward-title {
-        margin: 15px auto;
-        padding-bottom: 5px;
-    }
-
-    #rewardModal .modal-content {
-        padding: 10px;
-    }
-
-    #rewardModal .close {
-        position: absolute;
-        right: 15px;
-        top: 15px;
-        color: rgba(0, 0, 0, 0.5);
-        font-size: 1.3rem;
-        line-height: 20px;
-        cursor: pointer;
-    }
-
-    #rewardModal .close:hover {
-        color: #ef5350;
-        transform: scale(1.3);
-        -moz-transform:scale(1.3);
-        -webkit-transform:scale(1.3);
-        -o-transform:scale(1.3);
-    }
-
-    #rewardModal .reward-tabs {
-        margin: 0 auto;
-        width: 210px;
-    }
-
-    .reward-tabs .tabs {
-        height: 38px;
-        margin: 10px auto;
-        padding-left: 0;
-    }
-
-    .reward-content ul {
-        padding-left: 0 !important;
-    }
-
-    .reward-tabs .tabs .tab {
-        height: 38px;
-        line-height: 38px;
-    }
-
-    .reward-tabs .tab a {
-        color: #fff;
-        background-color: #ccc;
-    }
-
-    .reward-tabs .tab a:hover {
-        background-color: #ccc;
-        color: #fff;
-    }
-
-    .reward-tabs .wechat-tab .active {
-        color: #fff !important;
-        background-color: #22AB38 !important;
-    }
-
-    .reward-tabs .alipay-tab .active {
-        color: #fff !important;
-        background-color: #019FE8 !important;
-    }
-
-    .reward-tabs .reward-img {
-        width: 210px;
-        height: 210px;
-    }
-</style>
-
-<div id="reward">
-    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
-
-    <!-- Modal Structure -->
-    <div id="rewardModal" class="modal">
-        <div class="modal-content">
-            <a class="close modal-close"><i class="fas fa-times"></i></a>
-            <h4 class="reward-title">你的赏识是我前进的动力</h4>
-            <div class="reward-content">
-                <div class="reward-tabs">
-                    <ul class="tabs row">
-                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
-                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
-                    </ul>
-                    <div id="alipay">
-                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
-                    </div>
-                    <div id="wechat">
-                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<script>
-    $(function () {
-        $('.tabs').tabs();
-    });
-</script>
-
-            
         </div>
     </div>
 
@@ -731,18 +609,66 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;Current
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
             <div class="card">
-                <a href="/2020/10/22/seaborn-heatmap/">
+                <a href="/2020/10/22/python-xue-xi-dao-hang/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="seaborn.heatmap">
+                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="Python学习导航">
                         
-                        <span class="card-title">seaborn.heatmap</span>
+                        <span class="card-title">Python学习导航</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-10-22
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/python/" class="post-category">
+                                    python
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/python/">
+                        <span class="chip bg-color">python</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                Current&nbsp;<i class="far fa-dot-circle"></i>
+            </div>
+            <div class="card">
+                <a href="/2020/10/22/seaborn-xue-xi-bi-ji-yi/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="seaborn学习笔记（一）">
+                        
+                        <span class="card-title">seaborn学习笔记（一）</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -788,43 +714,6 @@
             </div>
         </div>
         
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                Next&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2020/10/19/test/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="test">
-                        
-                        <span class="card-title">test</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-10-19
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-user fa-fw"></i>
-                            man824
-                            
-                        </span>
-                    </div>
-                </div>
-                
-            </div>
-        </div>
-        
     </div>
 </article>
 
@@ -840,12 +729,8 @@
 
 <!-- 代码块复制 -->
 
-<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
-
 
 <!-- 代码块收缩 -->
-
-<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
 
 
 <!-- 代码块折行 -->
@@ -881,7 +766,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             contentSelector: '#articleContent',
             headingsOffset: -($(window).height() * 0.4 - 45),
             collapseDepth: Number('0'),
-            headingSelector: 'h2, h3, h4'
+            headingSelector: 'h1, h2, h3, h4'
         });
 
         // modify the toc link href to support Chinese.
@@ -893,7 +778,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
 
         // modify the heading title id to support Chinese.
         i = 0;
-        $('#articleContent').children('h2, h3, h4').each(function () {
+        $('#articleContent').children('h1, h2, h3, h4').each(function () {
             $(this).attr('id', tocHeading + (++i));
         });
 
@@ -968,7 +853,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">190</span>&nbsp;字
+                class="white-color">1.9k</span>&nbsp;字
             
             
             
@@ -992,7 +877,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             
         </div>
         <div class="col s12 m4 l4 social-link social-statis">
-    <a href="https://github.com/blinkfox" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+    <a href="https://github.com/" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
         <i class="fab fa-github"></i>
     </a>
 
